@@ -1,0 +1,45 @@
+#install.packages("tidyverse") #ggplot2, dplyr, tibble
+
+#Ctrl + Enter = execute line (multiple lines can be selected)
+#Ctrl + Shift + Enter = execute all
+
+#Save as RDS, which is an R specific file, saveRDS, readRDS
+
+```{r}
+2+2
+```
+#%>% = the pipe, shortcut = Control + Shift + M
+#run all = Control + Shift + R
+
+library(tidyverse) library(ggplot2)
+
+mtcars_small <- mtcars[1:5, 1:3] 
+mtcars_small
+
+mean(rowSums(mtcars_small))
+
+mtcars_small %>% rowSums() %>% mean()
+
+#Dataframes and vectors
+
+mtcars <- as.data.frame(mtcars)
+mtcars$gear |> length()
+#Use dollar sign to select column
+
+x <- c(1,4,6)
+#Use c to create a vector
+data <- tibble(x, ben)
+```{r}
+library(ggplot2)
+
+# Maak een eenvoudig dataframe met x- en y-waarden
+data <- data.frame(
+  x = c(1, 5),
+  y = c(2, 8)
+)
+
+# Gebruik ggplot() om een plot te maken
+ggplot(data, aes(x = x, y = y)) +
+  geom_line() # Gebruik geom_line() om een lijn te tekenen
+```
+
